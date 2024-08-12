@@ -1,0 +1,38 @@
+name: Fetch FPL Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # This schedules the job to run every day at midnight UTC
+  workflow_dispatch:  # This allows you to manually trigger the workflow
+
+jobs:
+  fetch-and-save-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests pandas
+
+    - name: Fetch FPL Data
+      run: |
+        python fetch_fpl_data.py
+
+    - name: Commit and push data
+      run: |
+        git config --local user.email "you@example.com"
+        git config --local user.name "Your Name"
+        git add players.csv
+        git commit -m "Update players.csv with latest data"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This is automatically provided by GitHub
