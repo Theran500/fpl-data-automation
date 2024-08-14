@@ -32,7 +32,11 @@ jobs:
         git config --local user.email "you@example.com"
         git config --local user.name "Your Name"
         git add players.csv
-        git commit -m "Update players.csv with latest data"
+        git add teams.csv
+        git add events.csv
+        git add element_types.csv
+        git add element_stats.csv
+        git commit -m "Update with latest data"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This is automatically provided by GitHub
