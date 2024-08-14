@@ -1,4 +1,5 @@
 import requests
+import json
 import pandas as pd
 
 # Fetch data from the FPL API
@@ -11,30 +12,18 @@ players_df = pd.json_normalize(data['elements'])
 teams_df = pd.json_normalize(data['teams'])
 events_df = pd.json_normalize(data['events'])
 element_types_df = pd.json_normalize(data['element_types'])
+element_stats_df = pd.json_normalize(data['element_stats'])
 
-# Merge the players and teams data on the team ID
-combined_df = pd.merge(players_df, teams_df, left_on='team', right_on='id', suffixes=('_player', '_team'))
+# Save each DataFrame to a CSV file
+players_df.to_csv('players.csv', index=False)
+teams_df.to_csv('teams.csv', index=False)
+events_df.to_csv('events.csv', index=False)
+element_types_df.to_csv('element_types.csv', index=False)
+element_stats_df.to_csv('element_stats.csv', index=False)
 
-# Merge with element types to include position data
-combined_df = pd.merge(combined_df, element_types_df, left_on='element_type', right_on='id', suffixes=('', '_element_type'))
-
-# To track gameweek performances, we typically need individual player performance data per gameweek.
-# For the sake of simplicity, we assume you have a way to retrieve player performances per gameweek 
-# from the 'https://fantasy.premierleague.com/api/event/{gameweek}/live/' endpoint.
-
-# Example pseudo-code to show integration (this part needs a loop through gameweeks):
-for event in events_df['id']:  # Loop through each gameweek ID
-    gw_url = f"https://fantasy.premierleague.com/api/event/{event}/live/"
-    gw_response = requests.get(gw_url)
-    gw_data = gw_response.json()
-    
-    # Assuming gw_data['elements'] contains performance stats for all players
-    gw_df = pd.json_normalize(gw_data['elements'])
-    
-    # Merge the gameweek performance data with the combined dataframe
-    combined_df = pd.merge(combined_df, gw_df, left_on='id_player', right_on='id', suffixes=('', f'_GW{event}'))
-
-# Save the combined DataFrame to a CSV file
-combined_df.to_csv('fpl_combined_gameweeks.csv', index=False)
-
-print("Data fetched and saved as fpl_combined_gameweeks.csv")
+print("Data fetched and saved as CSV files:")
+print(" - players.csv")
+print(" - teams.csv")
+print(" - events.csv")
+print(" - element_types.csv")
+print(" - element_stats.csv")
