@@ -31,7 +31,11 @@ jobs:
       run: |
         git config --local user.email "you@example.com"
         git config --local user.name "Your Name"
-        git add fpl_combined_with_matches.csv
+        git add players.csv
+        git add teams.csv
+        git add events.csv
+        git add element_types.csv
+        git add element_stats.csv
         git commit -m "Update with latest data"
         git push
       env:
