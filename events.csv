@@ -1,5 +1,5 @@
 id,name,deadline_time,release_time,average_entry_score,finished,data_checked,highest_scoring_entry,deadline_time_epoch,deadline_time_game_offset,highest_score,is_previous,is_current,is_next,cup_leagues_created,h2h_ko_matches_created,ranked_count,chip_plays,most_selected,most_transferred_in,top_element,transfers_made,most_captained,most_vice_captained,top_element_info.id,top_element_info.points,top_element_info
-1,Gameweek 1,2024-08-16T17:30:00Z,,50,False,False,3885335.0,1723829400,0,122.0,False,True,False,False,False,8597976,"[{'chip_name': 'bboost', 'num_played': 144974}, {'chip_name': '3xc', 'num_played': 221430}]",401.0,1.0,328.0,0,351.0,351.0,328.0,14.0,
+1,Gameweek 1,2024-08-16T17:30:00Z,,57,False,False,3546234.0,1723829400,0,127.0,False,True,False,False,False,8597356,"[{'chip_name': 'bboost', 'num_played': 144974}, {'chip_name': '3xc', 'num_played': 221430}]",401.0,1.0,328.0,0,351.0,351.0,328.0,14.0,
 2,Gameweek 2,2024-08-24T10:00:00Z,,0,False,False,,1724493600,0,,False,False,True,False,False,0,[],,,,0,,,,,
 3,Gameweek 3,2024-08-31T10:00:00Z,,0,False,False,,1725098400,0,,False,False,False,False,False,0,[],,,,0,,,,,
 4,Gameweek 4,2024-09-14T10:00:00Z,,0,False,False,,1726308000,0,,False,False,False,False,False,0,[],,,,0,,,,,
