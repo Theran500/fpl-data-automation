@@ -1,0 +1,45 @@
+name: Fetch EPL Match Data
+
+# Schedule the workflow to run automatically
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC; adjust as needed
+
+  # Optionally, allow manual triggering of the workflow from GitHub's Actions tab
+  workflow_dispatch:
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the repository
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    # Step 2: Set up Node.js environment
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # Ensure this matches your Node.js version requirements
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Step 4: Run the JavaScript script
+    - name: Run fetch script
+      env:
+        FOOTBALL_DATA_API_TOKEN: ${{ secrets.FOOTBALL_DATA_API_TOKEN }} # Uses GitHub Secrets for security
+      run: node fetchEPLData.js
+
+    # Step 5: Commit and push CSV files if they were updated
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "your-email@example.com"
+        git config --local user.name "your-github-username"
+        git add .
+        git commit -m "Update EPL results and fixtures"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub token for authentication
