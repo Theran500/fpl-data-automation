@@ -3,7 +3,7 @@ name: Fetch EPL Match Data
 # Schedule the workflow to run automatically
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight UTC; adjust as needed
+    - cron: '0 0 * * 4' # Runs daily at midnight UTC; adjust as needed
 
   # Optionally, allow manual triggering of the workflow from GitHub's Actions tab
   workflow_dispatch:
