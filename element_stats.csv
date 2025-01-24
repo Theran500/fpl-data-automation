@@ -21,3 +21,10 @@ Expected Goals,expected_goals
 Expected Assists,expected_assists
 Expected Goal Involvements,expected_goal_involvements
 Expected Goals Conceded,expected_goals_conceded
+Manager Win,mng_win
+Manager Draw,mng_draw
+Manager Loss,mng_loss
+Manager Table Bonus (Win),mng_underdog_win
+Manager Table Bonus (Draw),mng_underdog_draw
+Manager Clean Sheets,mng_clean_sheets
+Manager Goals Scored,mng_goals_scored
