@@ -33,7 +33,7 @@ id,name,deadline_time,release_time,average_entry_score,finished,data_checked,hig
 32,Gameweek 32,2025-04-12T10:00:00Z,,0,False,False,,1744452000,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
 33,Gameweek 33,2025-04-19T12:30:00Z,,0,False,False,,1745065800,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
 34,Gameweek 34,2025-04-26T10:00:00Z,,0,False,False,,1745661600,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
-35,Gameweek 35,2025-05-03T12:30:00Z,,0,False,False,,1746275400,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
+35,Gameweek 35,2025-05-02T17:30:00Z,,0,False,False,,1746207000,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
 36,Gameweek 36,2025-05-10T12:30:00Z,,0,False,False,,1746880200,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
 37,Gameweek 37,2025-05-18T12:30:00Z,,0,False,False,,1747571400,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
 38,Gameweek 38,2025-05-25T13:30:00Z,,0,False,False,,1748179800,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
