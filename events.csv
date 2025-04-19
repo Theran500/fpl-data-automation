@@ -34,6 +34,6 @@ id,name,deadline_time,release_time,average_entry_score,finished,data_checked,hig
 33,Gameweek 33,2025-04-19T12:30:00Z,,0,False,False,,1745065800,0,,False,False,True,True,True,True,True,True,0,"[{'chip_name': 'bboost', 'num_played': 73410}, {'chip_name': 'freehit', 'num_played': 23855}, {'chip_name': 'wildcard', 'num_played': 15302}, {'chip_name': '3xc', 'num_played': 18684}]",,,,973059,,,[],,,,
 34,Gameweek 34,2025-04-26T10:00:00Z,,0,False,False,,1745661600,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
 35,Gameweek 35,2025-05-02T17:30:00Z,,0,False,False,,1746207000,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
-36,Gameweek 36,2025-05-10T10:00:00Z,,0,False,False,,1746871200,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
+36,Gameweek 36,2025-05-10T12:30:00Z,,0,False,False,,1746880200,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
 37,Gameweek 37,2025-05-16T17:30:00Z,,0,False,False,,1747416600,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
 38,Gameweek 38,2025-05-25T13:30:00Z,,0,False,False,,1748179800,0,,False,False,False,False,False,False,False,True,0,[],,,,0,,,[],,,,
